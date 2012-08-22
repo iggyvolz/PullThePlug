@@ -60,12 +60,13 @@ class PullThePlug extends SpecialPage {
 		$wgGroupPermissions['user']['edit'] = false;
 		$wgGroupPermissions['autoconfirmed']['edit'] = false;
 		$wgGroupPermissions['bot']['edit'] = false;
-		$wgGroupPermissions['sysop']['edit'] = false;
-		$wgGroupPermissions['bureaucrat']['edit'] = false;
+		$wgGroupPermissions['sysop']['edit'] = true;
+		$wgGroupPermissions['bureaucrat']['edit'] = true;
 		  }
 		else
 		  {
-		  $wgOut->addWikiText( '<center>To "Pull the Plug", use the options below.</center><br />
+// Will work on this later.  Right now, I'm just focusing on sysop.
+$wgOut->addWikiText( '<center>To "Pull the Plug", use the options below.</center><br />
 *[[Special:PullThePlug/users|Registered users only]]
 *[[Special:PullThePlug/emailconfirmed|Email-confirmed users only]]
 *[[Special:PullThePlug/sysop|Sysops only]]
